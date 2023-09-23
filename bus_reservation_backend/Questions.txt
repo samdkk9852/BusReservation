@@ -1,0 +1,4 @@
+1. How does save method works on Update also in Dao.
+2. To Know more about Optional<> .
+3. @Data annotation ?
+4. @CrossOrigin annotation?

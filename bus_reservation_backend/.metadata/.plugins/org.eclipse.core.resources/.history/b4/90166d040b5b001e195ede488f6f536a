@@ -1,0 +1,43 @@
+package org.bus_reservation.service;
+
+import java.util.Optional;
+
+import org.bus_reservation.dao.AdminDao;
+import org.bus_reservation.dao.BusDao;
+import org.bus_reservation.dto.Admin;
+import org.bus_reservation.dto.Bus;
+import org.bus_reservation.dto.ResponseStructure;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+@Service
+public class BusService {
+	
+	@Autowired
+	private BusDao busDao;
+	@Autowired
+	private AdminDao adminDao;
+	
+	public ResponseEntity<ResponseStructure<Bus>> saveBus(Bus bus, int admin_id){
+		ResponseStructure<Bus> responseStructure = new ResponseStructure<>();
+		Optional<Admin> receiveAdmin = adminDao.findAdminById(admin_id);
+		
+		if(receiveAdmin.isPresent()) {
+			Admin admin = receiveAdmin.get();
+			admin.getBuses().add(bus);
+			bus.setAdmin(admin);
+			adminDao.updateAdmin(admin);
+			busDao.saveBus(bus);
+			
+			responseStructure.setResponseData(bus);
+			responseStructure.setResponseMessage("Bus Has Been Added");
+			responseStructure.setHttpStatus(HttpStatus.CREATED.value());
+			
+			return new ResponseEntity<ResponseStructure<Bus>>(responseStructure, HttpStatus.CREATED);
+		}
+		
+		return null;
+	}
+}

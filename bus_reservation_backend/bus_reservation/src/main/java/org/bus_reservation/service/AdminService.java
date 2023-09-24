@@ -1,5 +1,7 @@
 package org.bus_reservation.service;
 
+import java.util.Optional;
+
 import org.bus_reservation.dao.AdminDao;
 import org.bus_reservation.dto.Admin;
 import org.bus_reservation.dto.ResponseStructure;
@@ -31,4 +33,32 @@ public class AdminService {
 		
 		return new ResponseEntity<ResponseStructure<Admin>>(responseStructure,HttpStatus.ACCEPTED);
 	}
+	
+	public ResponseEntity<ResponseStructure<Admin>> verifyAdminByEmail(String email, String password){
+		ResponseStructure<Admin> responseStructure = new ResponseStructure<>();
+		Optional<Admin> receiveAdmin = adminDao.verifyAdminByEmail(email, password);
+		if(receiveAdmin.isPresent()) {
+			responseStructure.setResponseData(receiveAdmin.get());
+			responseStructure.setResponseMessage("Admin Found");
+			responseStructure.setHttpStatus(HttpStatus.OK.value());
+			
+			return new ResponseEntity<ResponseStructure<Admin>>(responseStructure, HttpStatus.OK);
+		}
+		return null;
+	}
+	
+	public ResponseEntity<ResponseStructure<Admin>> verifyAdminByPhone(long phone, String email){
+		ResponseStructure<Admin> responseStructure = new ResponseStructure<>();
+		Optional<Admin> receiveAdmin = adminDao.verifyAdminByEmail(phone, email);
+		if(receiveAdmin.isPresent()) {
+			responseStructure.setResponseData(receiveAdmin.get());
+			responseStructure.setResponseMessage("Admin Found");
+			responseStructure.setHttpStatus(HttpStatus.OK.value());
+			
+			return new ResponseEntity<ResponseStructure<Admin>>(responseStructure, HttpStatus.OK);
+		}
+		return null;
+	}
+	
+	
 }

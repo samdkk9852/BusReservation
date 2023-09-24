@@ -2,3 +2,6 @@
 2. To Know more about Optional<> .
 3. @Data annotation ?
 4. @CrossOrigin annotation?
+5. @Data annotation Vs @Getter, @Setter Annotations.
+6. @JsonIgnore ?
+

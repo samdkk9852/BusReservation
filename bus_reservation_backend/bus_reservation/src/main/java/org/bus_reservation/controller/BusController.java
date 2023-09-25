@@ -1,5 +1,6 @@
 package org.bus_reservation.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.bus_reservation.dto.Bus;
@@ -39,7 +40,7 @@ public class BusController {
 	}
 	
 	@GetMapping(value="/bus/route")
-	public ResponseEntity<ResponseStructure<List<Bus>>> findBusByRoutes(@RequestParam String from, @RequestParam String to){
-		return busService.findBusByRoutes(from, to);
+	public ResponseEntity<ResponseStructure<List<Bus>>> findBusByRoutes(@RequestParam String from, @RequestParam String to , @RequestParam LocalDate date_of_booking){
+		return busService.findBusByRoutes(from, to, date_of_booking);
 	}
 }

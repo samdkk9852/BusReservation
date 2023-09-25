@@ -1,5 +1,6 @@
 package org.bus_reservation.dao;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +24,7 @@ public class BusDao {
 	public Optional<Bus> findBusById(int bus_id){
 		return busRepository.findById(bus_id);
 	}
-	public List<Bus> findBusByRoutes(String from, String to){
-		return busRepository.findBusByRoutes(from, to);
+	public List<Bus> findBusByRoutes(String from, String to, LocalDate date_of_booking){
+		return busRepository.findBusByRoutes(from, to, date_of_booking);
 	}
 }

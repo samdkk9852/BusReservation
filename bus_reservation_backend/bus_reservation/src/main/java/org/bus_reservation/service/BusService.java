@@ -1,5 +1,6 @@
 package org.bus_reservation.service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -77,9 +78,9 @@ public class BusService {
 		return null;
 	}
 	
-	public ResponseEntity<ResponseStructure<List<Bus>>> findBusByRoutes(String from, String to){
+	public ResponseEntity<ResponseStructure<List<Bus>>> findBusByRoutes(String from, String to, LocalDate date_of_booking){
 		ResponseStructure<List<Bus>> responseStructure = new ResponseStructure<>();
-		List<Bus> bus_List = busDao.findBusByRoutes(from, to);
+		List<Bus> bus_List = busDao.findBusByRoutes(from, to, date_of_booking);
 		if(bus_List!=null) {
 			responseStructure.setResponseData(bus_List);
 			responseStructure.setResponseMessage("All the bus are fetched in that route");

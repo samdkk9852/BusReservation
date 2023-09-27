@@ -1,12 +1,14 @@
 package org.bus_reservation.dto;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,6 +33,8 @@ public class User {
 	private LocalDate date;
 	@Column(nullable = false, unique = true)
 	private long aadharnumber;
+	@OneToMany(mappedBy = "user")
+	private List<Ticket> tickets;
 	
 }
  

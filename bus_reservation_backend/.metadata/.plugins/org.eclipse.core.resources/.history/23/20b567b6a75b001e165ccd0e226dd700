@@ -1,0 +1,5 @@
+package org.bus_reservation.controller;
+
+public class TicketController {
+
+}

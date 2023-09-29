@@ -1,0 +1,26 @@
+.adminlogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: rgb(200, 88, 91);
+}
+.loginform{
+    padding: 20px;
+    margin-top: 30px;
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius:4px;
+    background-color: #fff;
+}
+
+.loginform> input{
+    width: 250px;
+}
+

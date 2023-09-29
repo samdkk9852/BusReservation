@@ -1,0 +1,60 @@
+.hero{
+    margin-top: 30px;
+    height: 60vh;
+    width: 100%;
+    background-image: url("https://s3.rdbuz.com/web/images/homeV2/HomeBannerImg.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchbox{
+    height: 22%;
+    width: 65%;
+    margin-top: 5%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid lightgray; */
+    background-color: #fff;
+    padding: 30px;
+}
+.searchbox__option{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 255%;
+    width: 100%;
+    padding: 10px;
+}
+.searchbox__swap{
+    margin: auto 15px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+.searchbox__date{
+    border: 1px solid lightgray;
+    border-color: transparent lightgray;
+}
+.searchbox__searchbus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(200, 88, 91);
+}
+.searchbox__option input{
+    border: none;
+}
+.searchbox__option h2{
+    color: #fff;
+}
+.searchbox__option button{
+   background-color: rgb(200, 88, 91);
+   border: none;
+   width: fit-content;
+   height: fit-content;
+}
+

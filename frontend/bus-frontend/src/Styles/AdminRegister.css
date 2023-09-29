@@ -1,0 +1,22 @@
+.adminregister{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 50px; */
+    background-color: rgb(200, 88, 91);
+    padding: 50px;
+}
+.registerform{
+    height: 400px;
+    width: 400px;
+    padding: 30px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+}
+.registerform> input{
+    width: 300px;
+}

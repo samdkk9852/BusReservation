@@ -1,0 +1,26 @@
+.adminnav{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(200, 88, 91);
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 30px;
+}
+.adminnav__left{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.adminnav__center{
+    display: flex;
+    align-items: center;
+}
+.adminnav__center  h3{
+    color: #fff ;
+}
+.adminnav__right{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

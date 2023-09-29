@@ -1,0 +1,19 @@
+.footer{
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    gap: 3rem;
+}
+.footer__link {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly ;
+    color: black;
+}
+.footer__rights{
+    margin-top: 3%;
+    color: rgb(147, 126, 126);
+}

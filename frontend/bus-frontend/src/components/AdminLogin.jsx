@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "../Styles/AdminLogin.css"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const AdminLogin = () => {
@@ -8,6 +8,8 @@ const AdminLogin = () => {
         email:"",
         password:""
     })
+
+    const navigate = useNavigate();
 
     const handleInput=(event)=>{
         const {name, value} = event.target;
@@ -27,10 +29,11 @@ const AdminLogin = () => {
         let password = adminData.password
         
         if(email.includes("@")){
-            axios.get(`http://localhost:8080/admin/verifyemail?email=${email}&password=${password}`)
+            axios.get(`http://localhost:8080/admin/verifyAdminByEmail?email=${email}&password=${password}`)
             .then((response)=>{
                 localStorage.setItem("admin", JSON.stringify(response.data.data))
                 alert("Login Successfull")
+                navigate("/adminlanding")
 
             })
             .catch((error)=>{
@@ -40,7 +43,7 @@ const AdminLogin = () => {
         }
         else{
             let phone = Number(email)
-            axios.get(`http://localhost:8080/admin/verifyemail?email=${phone}&password=${password}`)
+            axios.get(`http://localhost:8080/admin/verifyAdminByPhone?email=${phone}&password=${password}`)
             .then((response)=>{
                 localStorage.setItem("admin", JSON.stringify(response.data.data))
                 alert("Login Successfull")

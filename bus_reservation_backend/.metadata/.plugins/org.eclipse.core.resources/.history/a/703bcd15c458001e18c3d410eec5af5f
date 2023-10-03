@@ -1,5 +1,0 @@
-package org.bus_reservation.dto;
-
-public class ResponseStructure {
-
-}

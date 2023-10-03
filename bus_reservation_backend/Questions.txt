@@ -4,4 +4,6 @@
 4. @CrossOrigin annotation?
 5. @Data annotation Vs @Getter, @Setter Annotations.
 6. @JsonIgnore ?
+7. How to use Debugger in Springboot? And What is Debugger?
+8. Date_of_registeration should be fixed and date_of_depature should be updated every week/month.
 

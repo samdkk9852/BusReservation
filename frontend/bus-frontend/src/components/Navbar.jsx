@@ -38,6 +38,7 @@ const Navbar = () => {
         </div>
         <div>
           <Link to="/adminlanding">Admin-Page</Link>
+          <Link to="/busregisteration">Addbus-Page</Link>
         </div>
       </div>
       <div className="navbar__user">
@@ -54,7 +55,7 @@ const Navbar = () => {
                 <li>Cancel Ticket</li>
                 <li>Change Travel Date</li>
                 <li>Show My Ticket</li>
-                <li>Login/Signup</li>
+                <li><Link to="/userportal">Login/Signup</Link></li>
               </ul>
           
           </div>

@@ -1,0 +1,7 @@
+1.explain LocalStorage and it methods.
+2.React Portals.
+3. DropBox.
+4.How to set current date on the searchbox?
+5. How to use developer tools?
+6. Modal Dailogs in react?
+7. Dialog (Modal) Pattern?

@@ -7,6 +7,10 @@ import AdminRegister from './components/AdminRegister';
 import AdminNav from './AdminPage/AdminNav';
 import AdminLanding from './AdminPage/AdminLanding';
 import Footer from './components/Footer';
+import Map from './components/Map';
+import UserLogin from './components/UserLogin';
+import UserPortal from './components/UserPortal';
+import BusRegisteration from './AdminPage/BusRegisteration';
 
 function App() {
   return (
@@ -14,10 +18,13 @@ function App() {
       <BrowserRouter>
         
         <Routes>
-          <Route path="/" element={[<Navbar />, <Hero />]}/>
+          <Route path="/" element={[<Navbar />, <Hero />, <Map />]}/>
           <Route path='/adminlogin' element={[<Navbar />, <AdminLogin />]}/>
           <Route path='/adminregister' element={[<Navbar />, <AdminRegister />]}/>
           <Route path='/adminlanding' element={[<AdminNav />, <AdminLanding />]}/>
+          <Route path='/busregisteration' element={[<AdminNav />, <BusRegisteration />]}/>
+          {/* <Route path='/userlogin' element={<UserLogin />} /> */}
+          <Route path='/userportal' element={<UserPortal />} />
         </Routes>
         <Footer />
       </BrowserRouter>

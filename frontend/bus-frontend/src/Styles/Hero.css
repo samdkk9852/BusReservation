@@ -2,7 +2,8 @@
     margin-top: 30px;
     height: 60vh;
     width: 100%;
-    background-image: url("https://s3.rdbuz.com/web/images/homeV2/HomeBannerImg.svg");
+    /* background-image: url("https://s3.rdbuz.com/web/images/homeV2/HomeBannerImg.svg"); */
+    background-image: url("../image/bg3.png");
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;

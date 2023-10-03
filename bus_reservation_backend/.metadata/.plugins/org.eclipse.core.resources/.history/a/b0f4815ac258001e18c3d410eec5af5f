@@ -1,8 +1,0 @@
-package org.bus_reservation.repository;
-
-import org.bus_reservation.dto.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface UserRepository extends JpaRepository<User, Integer> {
-
-}

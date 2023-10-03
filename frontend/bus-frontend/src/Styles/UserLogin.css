@@ -1,0 +1,25 @@
+.userlogin{
+    height: 500px;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(200, 88, 91); */
+}
+.userform{
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid;
+    border-color: rgb(200, 88, 91);
+}
+.userform>input{
+    width: 250px;
+}

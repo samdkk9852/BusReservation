@@ -10,7 +10,7 @@ const AdminNav = () => {
         <h3>My Bus on redBus</h3>
       </div>
       <div className="adminnav__center">
-        <Link ><h3>Add Bus</h3></Link>
+        <Link to="/busregisteration"><h3>Add Bus</h3></Link>
       </div>
       <div className="adminnav__right">
         <h3>English</h3>

@@ -2,17 +2,22 @@
     height: 500px;
     width: 500px;
     padding: 20px;
+    position: fixed;
+    transform: translate(100%, -250%);
+    /* z-index: 5; */
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
-    /* background-color: rgb(200, 88, 91); */
+    text-align: center;
+    background-color: #fff;
 }
 .userform{
     height: 300px;
     width: 300px;
     padding: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;

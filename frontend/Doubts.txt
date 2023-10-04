@@ -5,3 +5,6 @@
 5. How to use developer tools?
 6. Modal Dailogs in react?
 7. Dialog (Modal) Pattern?
+8. React Dev Tool ?
+9. overflow ( css property ) what are the use cases?
+10. Cleanup action of useEffect? Explain with examples.

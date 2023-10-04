@@ -6,8 +6,8 @@
     border: 1px solid gray;
     border-radius: 20px;
     background-color: black;
-    height: 60vh;
-    width: 50%;
-    z-index: 10;
+    height: 65vh;
+    width: 55%;
+    /* z-index: 10; */
     margin-top: -90px;
 }

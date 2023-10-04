@@ -24,7 +24,7 @@ function App() {
           <Route path='/adminlanding' element={[<AdminNav />, <AdminLanding />]}/>
           <Route path='/busregisteration' element={[<AdminNav />, <BusRegisteration />]}/>
           {/* <Route path='/userlogin' element={<UserLogin />} /> */}
-          <Route path='/userportal' element={<UserPortal />} />
+          <Route path='/userportal' element={[<Navbar />, <Hero />, <Map />, <UserPortal />]} />
         </Routes>
         <Footer />
       </BrowserRouter>

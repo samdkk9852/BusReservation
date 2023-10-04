@@ -32,6 +32,6 @@ button{
     width: 35px ;
     background-color: rgb(200, 88, 91);
     color: white;
-    position: absolute;
-    translate: 630% -630%;
+    position: relative;
+    translate: 650% -50%;
 }
